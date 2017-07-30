@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
+    "lib": ["es2015", "es2016", "es2017", "dom"],
+    "module": "es2015",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "target": "es5",
+    "types": ["node"]
+  },
+  "files": [
+    "./src/globals.d.ts",
+    "./src/app.ts",
+    "./node_modules/phaser-ce/typescript/phaser.comments.d.ts"
+  ]
+}
