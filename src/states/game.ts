@@ -59,10 +59,10 @@ export default class Game extends Phaser.State {
     this.player.anchor.setTo(0.5, 1)
     this.game.physics.arcade.enable(this.player)
     this.player.body.setSize(
-      this.player.width * 0.7,
-      this.player.height * 0.75,
-      this.player.width * 0.3 / 2,
-      this.player.height * 0.25
+      this.player.width * 0.8,
+      this.player.height * 0.80,
+      this.player.width * 0.2 / 2,
+      this.player.height * 0.20
     )
     this.player.body.fixedRotation = true
     this.player.body.collideWorldBounds = true
@@ -244,18 +244,18 @@ export default class Game extends Phaser.State {
   public update() {
     if (this.playerEnergy > 0) {
       const maxLatSpeed =
-        Game.BASE_SPEED + this.playerPower * Game.BASE_SPEED * 4
+        Game.BASE_SPEED + this.playerPower * Game.BASE_SPEED * 8
 
       if (this.cursors.left.isDown || this.mobileLeft) {
         this.player.body.velocity.x = Math.max(
-          this.player.body.velocity.x - Game.BASE_SPEED * 0.5,
+          this.player.body.velocity.x - Game.BASE_SPEED * 0.4,
           -maxLatSpeed
         )
         this.player.frame = 1
         this.shadow.frame = 1
       } else if (this.cursors.right.isDown || this.mobileRight) {
         this.player.body.velocity.x = Math.min(
-          this.player.body.velocity.x + Game.BASE_SPEED * 0.5,
+          this.player.body.velocity.x + Game.BASE_SPEED * 0.4,
           maxLatSpeed
         )
         this.player.frame = 2
